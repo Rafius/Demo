@@ -1,0 +1,113 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Rafael Puyol <rafaelpuyol93@gmail.com> (rafaelpuyol.es)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandernanberg/react-boilerplate"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config config/webpack.config.dev.js",
+    "build": "NODE_ENV=production webpack --config config/webpack.config.prod.js",
+    "lint": "eslint 'src/**/*.js' && stylelint 'src/**/*.js'",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "moment": "^2.20.1",
+    "offline-plugin": "^4.9.0",
+    "polished": "^1.9.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0",
+    "react-hot-loader": "^3.1.3",
+    "react-loadable": "^5.3.1",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "reset-css": "^2.2.1",
+    "styled-components": "^2.4.0",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-polished": "^1.1.0",
+    "babel-plugin-preval": "^1.6.2",
+    "babel-plugin-styled-components": "^1.4.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.12",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "case-sensitive-paths-webpack-plugin": "^2.1.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.3.1",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "open-browser-webpack-plugin": "0.0.5",
+    "prettier": "^1.9.2",
+    "react-dev-utils": "^4.2.1",
+    "stylelint": "^8.4.0",
+    "stylelint-config-strateg": "^1.6.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.9.1",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "env": {
+      "browser": true
+    },
+    "rules": {
+      "semi": [
+        "error",
+        "never"
+      ],
+      "react/jsx-filename-extension": 0,
+      "react/prop-types": 0,
+      "import/prefer-default-export": 0
+    },
+    "globals": {
+      "preval": true
+    }
+  },
+  "stylelint": {
+    "processors": [
+      "stylelint-processor-styled-components"
+    ],
+    "extends": [
+      "stylelint-config-strateg",
+      "stylelint-config-styled-components"
+    ],
+    "syntax": "scss"
+  }
+}
