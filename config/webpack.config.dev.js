@@ -6,11 +6,12 @@ const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin')
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin')
 const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware')
 const noopServiceWorkerMiddleware = require('react-dev-utils/noopServiceWorkerMiddleware')
-const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 const paths = require('./paths')
 
 const publicPath = '/'
 const port = 3000
+
 
 module.exports = {
   devtool: 'cheap-module-inline-source-map',
@@ -36,6 +37,9 @@ module.exports = {
         options: {
           cacheDirectory: true,
         },
+      }, {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -56,7 +60,7 @@ module.exports = {
       template: paths.appHtml,
       inject: true,
     }),
-    new OpenBrowserPlugin({ url: 'http://localhost:3000' })
+    new OpenBrowserPlugin({ url: 'http://localhost:3000' }),
   ],
   performance: {
     hints: false,
