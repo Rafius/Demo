@@ -1,20 +1,21 @@
-import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import {Provider} from 'react-redux';
-import container from '../containers/container';
-import store from './store';
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import container from '../containers/container'
+import store from './store'
+import Header from '../components/commons/header'
 
-const Root = () => {
-  return (
-    <Provider store={store}>
-      <BrowserRouter>
-          {/* <Header/> */}
-          <Switch>
-            <Route exact path="/" component={container}/>
-          </Switch>
-      </BrowserRouter>
-    </Provider>
-  );
-};
+const Root = () => (
+  <Provider store={store}>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={container} />
+        </Switch>
+      </div>
+    </BrowserRouter>
+  </Provider>
+)
 
-export default Root;
+export default Root
