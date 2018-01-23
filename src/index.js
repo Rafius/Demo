@@ -16,7 +16,7 @@ const render = (Component) => {
 render(Routes)
 
 if (module.hot) {
-  module.hot.accept('./config/Routes', () => {
+  module.hot.accept('./config/routes', () => {
     render(Routes)
   })
 }
