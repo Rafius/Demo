@@ -1,4 +1,6 @@
+import React from 'react'
+
 const header = () => (
-  'test'
+  <span>a</span>
 )
 export default header

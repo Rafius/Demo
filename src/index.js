@@ -15,12 +15,11 @@ const render = (Component) => {
 
 render(Routes)
 
-// if (module.hot) {
-//   module.hot.accept('./config/routes', () => {
-//      const newApp = require('./config/routes')
-//     render(newApp)
-//   })
-// }
+if (module.hot) {
+  module.hot.accept('./config/Routes', () => {
+    render(Routes)
+  })
+}
 
 if (process.env.NODE_ENV === 'production') {
   // eslint-disable-next-line global-require

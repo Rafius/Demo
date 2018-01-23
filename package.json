@@ -11,7 +11,9 @@
     "start": "webpack-dev-server --config config/webpack.config.dev.js",
     "build": "NODE_ENV=production webpack --config config/webpack.config.prod.js",
     "lint": "eslint 'src/**/*.js' && stylelint 'src/**/*.js'",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -67,6 +69,7 @@
     "open-browser-webpack-plugin": "0.0.5",
     "prettier": "^1.9.2",
     "react-dev-utils": "^4.2.1",
+    "react-styleguidist": "^6.2.0",
     "stylelint": "^8.4.0",
     "stylelint-config-strateg": "^1.6.0",
     "stylelint-config-styled-components": "^0.1.1",

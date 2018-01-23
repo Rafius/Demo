@@ -1,7 +1,21 @@
 $font-stack:    Helvetica, sans-serif;
+$btn-font: Verdana;
+$btn-weight: bold;
 $primary-color: #333;
+$color: blue;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  background-color: $color;
+}
+.btn{
+  font-family: $btn-font;
+  font-weight: $btn-weight;
+  .span1{    
+    color: $color;
+  }
+  .span2{
+    color: white;
+  }
 }
