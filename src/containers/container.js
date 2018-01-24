@@ -1,16 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react'
+import BasicButton from '../components/BasicButton/BasicButton'
 
-class container extends Component {
-  render() {
-    return (
-      <div className="row">
-        <div className="col-sm-12 text-center">
-          <span>Este es el main container</span>
-         </div>
-      </div>
-    );
-  }
-}
+const container = () => (
+  <div className="row container">
+    <div className="col-sm-12 text-center">
+      <BasicButton strong="test" span="test" />
+    </div>
+  </div>
+)
 
 
-export default container;
+export default container
