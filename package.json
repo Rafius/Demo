@@ -5,13 +5,11 @@
   "author": "Rafael Puyol <rafaelpuyol93@gmail.com> (rafaelpuyol.es)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexandernanberg/react-boilerplate"
+    "url": "https://github.com/Rafius/Demo"
   },
   "scripts": {
     "start": "webpack-dev-server --config config/webpack.config.dev.js",
     "build": "NODE_ENV=production webpack --config config/webpack.config.prod.js",
-    "lint": "eslint 'src/**/*.js' && stylelint 'src/**/*.js'",
-    "precommit": "lint-staged",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
   },
