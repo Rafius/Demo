@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import s from './BasicButton.scss'
 
 export default function BasicButton({
-  background, height, width, strong, span,
+  background, height, width, strong, span, onClick, disabled
 }) {
   const styles = {
     background: BasicButton.background[background],
@@ -13,7 +13,7 @@ export default function BasicButton({
   }
 
   return (
-    <button className={s.btn} style={styles}>
+    <button className={s.btn} style={styles} onClick={onClick} disabled={disabled}>
       <div className="col-md-12">
         <strong className="strong">
           {strong}
@@ -28,14 +28,23 @@ export default function BasicButton({
   )
 }
 BasicButton.propTypes = {
+  /** The color for the button */
   background: PropTypes.oneOf(['lightBlue', 'blue', 'darkBlue']),
+  /** The size of the button */
   width: PropTypes.oneOf(['small', 'medium', 'large']),
   height: PropTypes.oneOf(['small', 'medium']),
+  /** Disable button */
+	disabled: PropTypes.bool,
+	/** Gets called when the user clicks on the button */
+	onClick: PropTypes.func,
 }
 BasicButton.defaultProps = {
   width: 'small',
   height: 'small',
   background: 'blue',
+  onClick: event => {
+		console.log('You have clicked me!', event.target);
+	},
 }
 BasicButton.background = {
   lightBlue: '-webkit-linear-gradient(left, #17aed9 0%, #009ee0 100%)',

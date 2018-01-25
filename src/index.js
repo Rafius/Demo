@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import './css/index.scss'
 import Routes from './config/routes'
+import './css/index.scss'
 
 const render = (Component) => {
   ReactDOM.render(

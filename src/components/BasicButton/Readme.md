@@ -3,7 +3,8 @@ There are a few sizes of Basic Button that will be listed above
 Basic 1x1 Basic Button:
 
 ```jsx
-<BasicButton strong="Retirar 40 € " span="sin comprobante"/>
+<BasicButton strong="Retirar 40 € " span="sin comprobante"
+  onClick={() => alert('hola')}/>
 ```
 2x1 Basic Button:
 

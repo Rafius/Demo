@@ -38,7 +38,7 @@ module.exports = {
           cacheDirectory: true,
         },
       }, {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         loader: 'style-loader!css-loader?modules',
       },
       {
