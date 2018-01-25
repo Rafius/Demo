@@ -41,6 +41,10 @@ module.exports = {
         test: /\.scss$/,
         loader: 'style-loader!css-loader?modules',
       },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limit=8192',
+      },
     ],
   },
   plugins: [
