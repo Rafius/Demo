@@ -8,7 +8,16 @@ export default function HeaderImage({
 }) {
   src = require(`../../assets/${src}.png`)
   return (
-    <img className={s.headerImg} alt={alt} src={src} />
+    <div className="row">
+      <button href="/">
+        <div className="colg-lg-12">
+          <img className={s.headerImg} alt={alt} src={src} />
+        </div>
+        <div className="colg-lg-12">
+          <span>{span}</span>
+        </div>
+      </button>
+    </div>
   )
 }
 HeaderImage.propTypes = {

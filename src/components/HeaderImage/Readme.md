@@ -1,3 +1,3 @@
 ```jsx
-<HeaderImage/>
+<HeaderImage span='texto'/>
 ```
