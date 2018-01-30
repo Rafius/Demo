@@ -7,14 +7,14 @@ export default function BasicButton({
   background, height, width, strong, span, onClick, disabled
 }) {
   const styles = {
-    background: BasicButton.background[background],
     height: BasicButton.height[height],
-    width: BasicButton.width[width],
+    width: BasicButton.width[width]
   }
 
   return (
     <button className={s.btn} style={styles} onClick={onClick} disabled={disabled}>
       <div className="col-md-12">
+        
         <strong className="strong">
           {strong}
         </strong>
@@ -36,7 +36,7 @@ BasicButton.propTypes = {
   /** Disable button */
 	disabled: PropTypes.bool,
 	/** Gets called when the user clicks on the button */
-	onClick: PropTypes.func,
+	onClick: PropTypes.func
 }
 BasicButton.defaultProps = {
   width: 'small',
@@ -44,12 +44,10 @@ BasicButton.defaultProps = {
   background: 'blue',
   onClick: event => {
 		console.log('You have clicked me!', event.target);
-	},
+	}
 }
 BasicButton.background = {
-  lightBlue: '-webkit-linear-gradient(left, #17aed9 0%, #009ee0 100%)',
-  blue: '-webkit-linear-gradient(left, #0075a7 0%, #0087c1 100%)',
-  darkBlue: '-webkit-linear-gradient(left, #002d47 0%, #00547a 100%)',
+
 }
 BasicButton.width = {
   small: '200px',

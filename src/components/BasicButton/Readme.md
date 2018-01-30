@@ -3,13 +3,13 @@ There are a few sizes of Basic Button that will be listed above
 Basic 1x1 Basic Button:
 
 ```jsx
-<BasicButton strong="Retirar 40 € " span="sin comprobante"
-  onClick={() => alert('hola')}/>
+<BasicButton test strong="Retirar 40 € " span="sin comprobante"
+  onClick={() => alert('hola')} />
 ```
 2x1 Basic Button:
 
 ```jsx
-<BasicButton strong="Retirar 40 € " span="sin comprobante" width="medium" height="small"/>
+<BasicButton strong="Retirar 40 € " span="sin comprobante" width="medium" height="small" type="btnDarkBlue"/>
 ```
 
 1x2 Basic Button:
@@ -31,18 +31,20 @@ Basic 1x1 Basic Button:
 
 That are the different color that a basic BasicButton have:
 
-Blue:
-
 ```jsx
-<BasicButton strong="Retirar 40€ " span="sin comprobante" background="blue"/>
+<div>
+Blue:  <BasicButton strong="Retirar 40€ " span="sin comprobante" background="blue"/>
+Dark Blue: <BasicButton strong="Retirar 40€ " span="sin comprobante" background="darkBlue"/>
+Light Blue: <BasicButton strong="Retirar 40 € " span="sin comprobante" background="lightBlue"/>
+
+</div>
 ```
-Dark Blue:
+
 
 ```jsx
-<BasicButton strong="Retirar 40€ " span="sin comprobante" background="darkBlue"/>
+
 ```
-Light Blue:
+
 
 ```jsx
-<BasicButton strong="Retirar 40 € " span="sin comprobante" background="lightBlue"/>
 ```
