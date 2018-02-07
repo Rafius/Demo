@@ -1,3 +1,0 @@
-```jsx
-<HeaderImage text/>
-```
